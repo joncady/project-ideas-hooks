@@ -51,11 +51,11 @@ export default function IdeasPage() {
                 <Dimmer active={loading} inverted>
                     <Loader>Loading</Loader>
                 </Dimmer>
-                <Grid stackable columns={2}>
+                <Grid stackable columns={3}>
                     {ideas.filter(filterWithTitle).map((idea, index) => <Grid.Column key={`idea${index}`}><Idea {...idea} /></Grid.Column>)}
                 </Grid>
             </Segment>
-            <Segment>
+            <Segment style={{ marginBottom: '1rem'}}>
                 <CreateIdea />
             </Segment>
         </Container>
